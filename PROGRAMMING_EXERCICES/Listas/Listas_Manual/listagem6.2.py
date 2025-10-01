@@ -1,0 +1,3 @@
+#LISTAGEM COM ELEMENTOS NO CASO 3
+
+lista = [2 , 4 ,7]

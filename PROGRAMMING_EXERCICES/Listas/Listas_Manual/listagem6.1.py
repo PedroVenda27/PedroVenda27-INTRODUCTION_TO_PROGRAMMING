@@ -1,0 +1,2 @@
+#LISTAGEM vAZIA
+lista = []

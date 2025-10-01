@@ -1,0 +1,69 @@
+import random
+import time
+
+def girar_roleta():
+    print("A roleta está girando...")
+    time.sleep(2)
+    numero_ganho = random.randint(0, 36)
+    print(f"O número vencedor é: {numero_ganho}")
+    return numero_ganho
+
+def obter_cor(numero):
+    if numero == 0:
+        return "verde"
+    elif numero % 2 == 0:
+        return "vermelho"  # números pares
+    else:
+        return "preto"     # números ímpares
+
+def apostar():
+    while True:
+        try:
+            aposta = input("Faça sua aposta (número, preto, vermelho, verde): ").lower()
+            if aposta in ("preto", "vermelho", "verde"):
+                return aposta
+            elif aposta.isdigit() and 0 <= int(aposta) <= 36:
+                return int(aposta)
+            else:
+                print("Aposta inválida. Por favor, escolha um número entre 0 e 36 ou preto, vermelho, verde.")
+        except ValueError:
+            print("Entrada inválida. Por favor, insira um número inteiro ou preto, vermelho, verde.")
+
+def jogo_roleta():
+    saldo = 1000  # saldo inicial do jogador
+
+    while saldo > 0:
+        print(f"\nSeu saldo atual é: ${saldo}")
+        valor_aposta = int(input("Quanto você quer apostar? "))
+        
+        if valor_aposta > saldo:
+            print("Você não pode apostar mais do que o seu saldo atual.")
+            continue
+
+        aposta = apostar()
+        numero_ganho = girar_roleta()
+
+        cor_apostada = "verde" if aposta == "verde" else obter_cor(aposta)
+        cor_ganha = obter_cor(numero_ganho)
+
+        print(f"A cor apostada é: {cor_apostada}")
+        print(f"A cor vencedora é: {cor_ganha}")
+
+        if aposta == numero_ganho:
+            ganho = valor_aposta * 35  # pagamento de 35 para 1
+            saldo += ganho
+            print(f"Parabéns! Você ganhou ${ganho}!")
+        elif cor_apostada == cor_ganha:
+            ganho = valor_aposta * 2  # pagamento de 2 para 1 para cor
+            saldo += ganho
+            print(f"Parabéns! Você acertou a cor. Você ganhou ${ganho}!")
+        else:
+            saldo -= valor_aposta
+            print("Você perdeu. Tente novamente.")
+
+    print("Seu saldo chegou a zero. O jogo acabou.")
+
+if __name__ == "__main__":
+    print("Bem-vindo ao jogo de roleta do cassino!")
+    jogo_roleta()
+

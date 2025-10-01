@@ -1,0 +1,19 @@
+.endswith ("o") ---------- # TERMINA EM 
+.startsswith ("o") ---------- # COMEÇA EM
+.lower() ---------- # TRANFORMA PARA MINUSCULAS
+.upper() ---------- # TRANSFORMA PARA MAIUSCULAS
+.strip ---------- # RETIRA OS ESPAÇOS A ESQUERDA E A DIREITA
+.lstrip ---------- # RETIRA OS ESPAÇOS A ESQUEDA 
+.rstrip ---------- # RETIRA OS ESPAÇOS A DIREITA
+.replace("ão", "om") ---------- # SUBSTITUI ÃO POR OM
+.itsdigit ---------- # VERIFICA SE O TEXTO É APENAS DIGITOS NUMERICOS
+.italpha ---------- # VERIFICA SE O TEXTO É APENAS DIGITOS LETRAS
+.title() ---------- # IMPRIME EM FORMATO DE TITULO (PRIMEIRAS LETRAS MAIUSCULAS)
+.capitalize() ---------- # IMPRIME EM FORMATO DE FRASE (APENA PRIMEIRA LETRA MAIUSCULA)
+.swapcase() ---------- # INVERTE MAIUSCULAS E MINUSCULAS
+.remove() ---------- # REMOVE
+nomes.append(nome) ---------- # ADICIONA O TEXTO DA VARIAVEL NOME A VARIAVEL NOMES 
+len(texto) ---------- # VERIFICA QUANTOSS CARACTERES TEM O TEXTO
+(print(string_sem_espacos[i:])) ----------#ultimo parar primeiro
+(print(string_sem_espacos[:i])) ----------#primeiro para ultimo
+texto_limpo[::-1] ---------- #INVERTE O TEXTO EXEMPLO: PAULO/OLUAP

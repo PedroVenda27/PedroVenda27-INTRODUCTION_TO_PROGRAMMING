@@ -1,0 +1,5 @@
+#IMPRESSÃO DE TODOS OS ELEMENTOS DE UMA LISTA COM FOR
+
+L = [8, 9, 15]
+for e in L:
+    print(e)
