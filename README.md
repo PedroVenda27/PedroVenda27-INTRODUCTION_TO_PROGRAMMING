@@ -51,4 +51,4 @@ Individual repository developed by **[Pedro Venda](https://github.com/PedroVenda
 
 ---
 
-✨ *"Learning programming by building logic, step by step."*  
+✨ *" Learning programming by building logic, step by step. "*    
